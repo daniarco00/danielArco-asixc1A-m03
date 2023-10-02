@@ -1,4 +1,3 @@
-
 """
 Danil Arco Guasch
 18/09/2023
@@ -8,8 +7,11 @@ Estructura d'un programa informàtic -  Algoritmes - Git
 ...
 ...
 """
+
 #This is a commnent
 print("Hello world :) ")
+
+
 
 
 
