@@ -16,10 +16,10 @@ diaActual = int(input("Quin dia es avui? "))
 mesActual = int(input("En quin mes estem? "))
 
 if diaAniversari > diaActual and mesAniversari > mesActual:
-    print("El teu aniversari ha passat.")
+    print("El teu aniversari no ha passat.")
 elif diaActual == diaAniversari and mesActual == mesAniversari:
     print("Es el teu aniversari.")
 else:
-    print("El teu aniversari no ha passat.")
+    print("El teu aniversari ha passat.")
 
 
