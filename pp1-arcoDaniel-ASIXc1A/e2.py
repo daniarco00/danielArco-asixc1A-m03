@@ -1,3 +1,10 @@
+"""
+Daniel Arco Guasch
+ASIXc1A
+Pp1A Prova Pràctica  UF1 M03 ASIXc
+20/10/2023
+"""
+
 print("Programa per calcular la nota final de la UF2 del modul03 d'ASIX.")
 print("Els criteris d'avaluació seràn de UF2 = 1*RA on RA = (0.15*Pt1.1 + 0.15*Pr1.2 + 0.7*Pp1 )")
 
