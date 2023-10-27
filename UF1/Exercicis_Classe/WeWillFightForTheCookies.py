@@ -9,14 +9,12 @@ Output
 Let's Eat!
 """
 
-num = input()
-
-num = num.split(" ")
-
-num_personas = num[:1]
-num_galetes = num[1:2]
-
-if num_personas % num_galetes:
-    print("it works")
+try:
+    entrada = input().split()
+    entrada_personas = int(entrada[0])
+    entrada_galetes = int(entrada[1])
+    if entrada_galetes % entrada_personas == 0:
 
 
+except:
+    print("Las cagao")
