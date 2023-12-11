@@ -1,6 +1,6 @@
 import random
 try:
-    intents = 0
+    intents = 1
     num = random.randint(1, 100)
     print(num)
 
@@ -17,8 +17,8 @@ try:
             print(f"Correcte!, has necesitat {intents} vegades.")
             intents = 10
 
-        if intents == 10 and num_usuari != num:
-            print(f"El numero correcte era {num}.")
+    if intents == 10 and num_usuari != num:
+        print(f"El numero correcte era {num}.")
 
 except:
     print("Error")
