@@ -1,24 +1,24 @@
 import time
+hora = 0
+minuto = 0
+segundo = 0
+
+
 while True:
-    hora = 00
-    minuto = 00
-    segundo = 00
-    print(f"{hora}:{minuto}:{segundo}")
-    for i in range(1, 60):
-        segundo += 1
-        print(f"{hora}:{minuto}:{segundo}")
-        time.sleep(0.1)
-    if i == 59:
-        segundo == 0
+    print(f"´{hora:02}:{minuto:02}:{segundo:02}")
+    segundo += 1
+    time.sleep(0.15)
+
+    if segundo == 60:
+        segundo = 0
         minuto += 1
-        print(f"{hora}:{minuto}:{segundo}")
-        time.sleep(0.1)
-        for i in range(1, 60):
-            segundo += 1
-            print(f"{hora}:{minuto}:{segundo}")
-            time.sleep(0.1)
 
+    if minuto == 60:
+        minuto = 0
+        hora += 1
 
+    if hora == 24:
+        hora = 0
 
 
 
