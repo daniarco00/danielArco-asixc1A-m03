@@ -15,8 +15,6 @@ print("Programada terminado")
 
 
 
-
-
 #Programa que demana a l'usuari un PIN, de manera repetitiva mentre que no introdueixi “1234”.
 
 #L'usuari té només 3 intents.
