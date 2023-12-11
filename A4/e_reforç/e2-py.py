@@ -4,7 +4,7 @@ try:
     num = random.randint(1, 100)
     print(num)
 
-    while intents != 10:
+    while intents != 10 and num != num_usuari:
         num_usuari = int(input("Introdueix el numero: "))
         if num_usuari != num:
             print("Incorrecte, torna a provar.")
