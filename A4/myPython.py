@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 """
 Programa per crear una serp Python a mida.
@@ -26,3 +27,28 @@ else:
     print("El valor minim de cos es de 5")
 
 
+=======
+import math
+
+CAP= "....\...../...."
+
+ULLS= "...╚⊙ ⊙╝..."
+
+COS = "═(███)═"
+
+CUA =  " ═V═ "
+
+
+valor = int(input())
+
+
+
+print(f"{CAP}")
+print(f"  {ULLS}")
+for x in range(valor):
+    zigzag = "     "
+    contador = zigzag + "  "
+    print(f"{zigzag}{COS}")
+
+print(CUA)
+>>>>>>> origin/master
