@@ -1,31 +1,27 @@
-try:
-    llista = []
-    llista_interval = []
-    llista_forainterval = []
-    llista_restant = []
-    num = 1
 
-    interval_alt = int(input())
-    interval_baix = int(input())
-    """while interval_alt < interval_baix:
-        interval_baix = int(input())
-        interval_alt = int(input())"""
+interval = []
+llista_dins_interval = []
+llista_fora_interval = []
+llista_igual_interval = []
 
-    for i in range(interval_baix, interval_alt+1):
-        llista.append(i)
-    while num != 0:
-        num = int(input())
-        if num == interval_baix or num == interval_alt:
-            llista_restant.append(num)
-        elif num not in llista:
-            llista_interval.append(num)
-        elif num in llista:
-            llista_forainterval.append(num)
+limit_inferior = int(input("Introduce el limite inferior: "))
+limit_superior = int(input("Introduce el limite superior: "))
+while limit_superior < limit_inferior:
+    limit_inferior = int(input())
+    limit_superior = int(input())
+for x in range(limit_inferior, limit_superior+1):
+    interval.append(x)
 
-    print(f"La suma dels numeros que estan dins del interval es {sum(llista_interval)}. \n"
-          f"La quantitat de numeros que son fora del interval son {llista_forainterval}. \n"
-          f"Hi han hagut tants {len(llista_restant)}.")
+num = 1
+while num != 0:
+    num = int(input("Introduce los valores: \n 0 para salir"))
+    if num in interval:
+        llista_dins_interval.append(num)
+    elif num not in interval:
+        llista_fora_interval.append(num)
+    elif num == limit_inferior or limit_superior:
+        llista_igual_interval.append(x)
 
+print(f"El numero dins del interval son {sum(llista_dins_interval)} fora del interval son {llista_fora_interval}"
+        f"i els que son iguals als limits d'interval son {llista_igual_interval}")
 
-except:
-    print("Error")
