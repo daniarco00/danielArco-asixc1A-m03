@@ -1,11 +1,11 @@
+digits = str(input())
+suma = 0
 
-input = [1, 2, 3, 4, 5]
+for digit in digits:
+    digit = int(digit)
+    suma += digit
 
-
-for i in input:
-    for x in range(1, 11):
-        print(f'{i} * {x} = {i * x}')
-
+print(f"La suma dels dos digits es {suma}")
 
 
 
