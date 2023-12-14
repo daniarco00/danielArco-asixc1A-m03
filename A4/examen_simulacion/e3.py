@@ -47,8 +47,6 @@ try:
                 print()
                 print(f"{numeros_horiz}")
 
-
-
 except:
     print("Error")
 
