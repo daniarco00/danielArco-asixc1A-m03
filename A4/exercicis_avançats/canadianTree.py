@@ -3,7 +3,7 @@ Fer un programa que dibuixa un avet del Canadà.
 Cal demanar la mida de l'arbre. La mida inclou el tronc i les branques
 """
 
-brick = "🌿"
+hoja = "🌿"
 n = int(input())
 
 for i in range(1, n+1):
@@ -13,5 +13,5 @@ for i in range(1, n+1):
         print(f"{espais_tronc}{amplada_tronc}")
     else:
         espacio = " " * (n - i)
-        bricks = brick * i
+        bricks = hoja * i
         print(espacio + bricks)

@@ -11,44 +11,36 @@ Cal fer el control d'errors.
 Un taulell d'escacs, és una matriu de 8x8. És a dir, 8 files i 8 columnes.
 La torre és una figura que només permet moviments en horitzontal y en vertical
 """
+
 try:
-    numeros_vert = (1,2,3,4,5,6,7,8)
-    numeros_horiz = ("   1  2  3  4  5  6  7  8")
-    for i in range(8):
-        print(f"\n {numeros_vert[i]}", end="")
-        for j in range(8):
-            if (i + j) % 2 == 0:
-                print(" B ", end="")
-            else:
-                print(" N ", end="")
-        if i == 7:
-            print()
-            print(f"{numeros_horiz}")
+    notes = [int(x) for x in input("Introdueix les notes d'11 alumnes (sense decimals): ").split()]
+    notes_aprovat = []
+    notes_suspes = []
+    cont_aprovat = 0
+    cont_suspes = 0
 
-    posicio_vert = int(input("Introduix la posicio vertical de la torre (1-8): "))
-    posicio_horiz = int(input("Introdueix la posicio horitzontal de la torre (1-8): "))
-
-
-
-    for i in range(8):
-        if posicio_vert == i+1:
-            print(f"\n {numeros_vert[i]}", end="")
-            print(f"{' * ' * 8}", end="")
+    for i in notes:
+        if i >= 5:
+            notes_aprovat.append(i)
+            cont_aprovat += 1
         else:
-            print(f"\n {numeros_vert[i]}", end="")
-            for j in range(8):
-                if posicio_horiz == j+1:
-                    print(" * ", end="")
-                elif (i + j) % 2 == 0:
-                    print(" B ", end="")
-                else:
-                    print(" N ", end="")
-            if i == 7:
-                print()
-                print(f"{numeros_horiz}")
+            notes_suspes.append(i)
+            cont_suspes += 1
+
+    for i in notes:
+        if i < 0 or i > 10:
+            raise TypeError
+
+    if (cont_aprovat + cont_suspes) > 11 or (cont_aprovat + cont_suspes) < 11:
+        raise TypeError
+
+
+    print(f":( Suspesos: {cont_suspes} \n"
+          f"{notes_suspes} \n"
+          f":) Aprovats: {cont_aprovat} \n"
+          f"{notes_aprovat}")
 
 except:
-    print("Error")
-
+    print("Introdueix be les dades. ")
 
 
