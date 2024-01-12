@@ -9,19 +9,18 @@ programa que demani una cadena de caràcters, un caràcter a modificar canviats 
 No es pot fer servir cap funció predefinida de Python. Cal fer el control d'errors.
 """
 try:
-    cadena = str(input("Introudiex una cadena de caracters: "))
-    caracter_antic = str(input("Introdueix el caracter de la cadena el qual vols modificar (1 caracter): "))
-    caracter_nou = str(input("introdueix el caracter pel qual vols modificar el caracter anteriorment introduit (1 cara"
-                             "cter): "))
+    cadena = input("Introdueix una frase: ")
+    caracter_antic =input("Introdueix el caracter que vulguis cambiar: ")
+    caracter_nou = input("Introdueix el caracter per el qual vols cambiar: ")
 
-    if len(caracter_nou) > 1 or len(caracter_antic) > 1 or caracter_antic not in cadena:
-        raise TypeError
 
     for car in cadena:
         if car == caracter_antic:
             print(caracter_nou, end="")
         else:
             print(car, end="")
+
+
 
 except:
     print("Introdueix les dades correctament.")
