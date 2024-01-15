@@ -1,16 +1,12 @@
 
-llista = []
-llista = (input())
+
+entrada_usuario = input()
+llista = entrada_usuario.split()
 
 primer = llista[0]
-ultim = llista[:-1]
+ultim = llista[-1]
 
-print(llista[0])
-print(primer)
-
-
-llista[0:] = ultim
-llista[:-1] = primer
-
+llista[0] = ultim
+llista[-1] = primer
 
 print(llista)

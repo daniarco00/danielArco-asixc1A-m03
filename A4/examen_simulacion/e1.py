@@ -2,21 +2,22 @@
 Danil Arco Guasch
 15/12/2023
 ASIXc A M03 UF1 A4
-Descripció: MyReplace
+Descripció:
+
+L'usuari introduirà una llista d'enters separada per espais. Prèviament dirà quants enters introduirà.
+Un cop llegits tots, mostrar per pantalla la suma de tots els valors positius.
+Cal fer el control d'errors.
+
 """
 try:
-    cadena = str(input("Introdueix una cadena de caracters: "))
-    cadena_antiga = str(input("Introdueix el caràcter que vols remplaçar: "))
-    cadena_nova = str(input("Introdueix el nou caràcter cadena: "))
+    llista = [int(x) for x in input("Introdueix una llista d'enters separades per espais: ").split()]
+    llista_positius = []
 
-    if cadena_antiga not in cadena or len(cadena_antiga) > 1 or len(cadena_nova) > 1:
-        raise TypeError
-
-    for car in cadena:
-        if car == cadena_antiga:
-            print(cadena_nova, end="")
-        else:
-            print(car, end="")
+    for i in llista:
+        if i > 0:
+            llista_positius.append(i)
+    print(f"La suma dels numeros positius que has introduit es {sum(llista_positius)}")
 
 except:
-    print("Introdueix be les dades.")
+    print("Introdueix les dades correctament.")
+
