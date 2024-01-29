@@ -1,12 +1,11 @@
 
 
-entrada_usuario = input()
-llista = entrada_usuario.split()
+entrada_usuario = [int(i) for i in input().split()]
 
-primer = llista[0]
-ultim = llista[-1]
+primer = entrada_usuario[0]
+ultim = entrada_usuario[-1]
 
-llista[0] = ultim
-llista[-1] = primer
+entrada_usuario[0] = ultim
+entrada_usuario[-1] = primer
 
-print(llista)
+print(entrada_usuario)
