@@ -1,5 +1,5 @@
 """
-S'imprimeix una piràmide d'altura N de 🧱 centrada
+S'imprimeix una piràmide d'nums[0] N de 🧱 centrada
 input
 5
 output
