@@ -1,6 +1,3 @@
-import time
-
-input = int(input())
-for x in range(input):
-    print("Mississipi")
-    time.sleep(1)
+puntuacionA, puntuacionB = [int(i) for i in input().split()]
+print(puntuacionA)
+print(puntuacionB)
