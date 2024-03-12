@@ -1,51 +1,31 @@
-"""
-Danieh
-"""
+import random
+import re
 
-from time import sleep
-# region Declaració de Funcions ----------
-def recopilar_ingredients():
-   print("Comprar al supermercat")
-   sleep(1)
-   print("Disposar-los sobre el marbre")
-   sleep(1)
+def solicitar_frase():
+    return input("Introduce una frase: ")
 
-def cuinar_tallarines():
-    print("Preparar aigua.")
-    sleep(1)
-    print("Bullir tallarines.")
-    sleep(1)
-    print("Escorrer tallarines.")
-    sleep(1)
-    print("Deixar les preparades.")
-    sleep(1)
 
-def cuinar_pastanagues():
-    print("Tallar pastanagues.")
-    sleep(1)
-    print("Frgir pastanagues.")
-    sleep(1)
-    print("Deixar pastanagues preparades.")
-    sleep(1)
+def desordenar_palabras(frase):
+    urls = re.findall(r'(http://)[^\s]*', frase)
+    for url in urls:
+        frase = frase.replace(url, '{}')
+    palabras = re.split('([^a-zA-Z0-9áéíóúÁÉÍÓÚ])', frase)
+    resultado = []
+    for palabra in palabras:
+        if palabra.isdigit() and len(palabra) == 9:
+            nueva_palabra = palabra
+        elif len(palabra) > 2 and (palabra[0].isalnum() and palabra[-1].isalnum()):
+            first_char = palabra[0]
+            last_char = palabra[-1]
+            centro = list(palabra[1:-1])
+            random.shuffle(centro)
+            nueva_palabra = first_char + ''.join(centro) + last_char
+        else:
+            nueva_palabra = palabra
+        resultado.append(nueva_palabra)
+    frase_randomizada = ''.join(resultado).format(*urls)
+    return frase_randomizada
 
-def cuinar_cebes():
-    print("Tallar cebes.")
-    sleep(1)
-    print("Fregir pastanagues")
-    sleep(1)
-    print("Deixar cebes preparades")
-    sleep(1)
 
-def preparacio_final():
-    print("Barrejar ingredients amb salsa yakitori.")
-    sleep(1)
-    print("Deixar llest per servir.")
-
-# endregion
-# region INICI: Preparar fideus Yakisoba
-recopilar_ingredients()
-cuinar_tallarines()
-cuinar_pastanagues()
-cuinar_cebes()
-preparacio_final()
-# endregion
+frase = solicitar_frase()
+print(desordenar_palabras(frase))
