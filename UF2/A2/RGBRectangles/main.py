@@ -1,4 +1,4 @@
-from read import entrada_usuari, seleccio_color, definir_largaria, definir_ancho, imprimir_forma
+from kernel import entrada_usuari, seleccio_color, definir_largaria, definir_ancho, imprimir_forma
 from color import CRED, CBLUE, CGREEN
 
 
