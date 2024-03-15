@@ -5,7 +5,7 @@ def entrada_usuari():
     cuadrat = []
     while True:
         sortida = input('')
-        if sortida == ':Q':
+        if sortida == ';Q':
             break
         cuadrat.append(sortida.split())
     return cuadrat
@@ -29,18 +29,20 @@ def seleccio_color(cuadrat):
 def definir_largaria(cuadrat):
     largaria = []
     for i in range(len(cuadrat)):
-        largaria.append(len(cuadrat[i][1]))
+        largaria.append(int(cuadrat[i][1]))
     return largaria
 #endregion
 #region definir ancho
 def definir_ancho(cuadrat):
     ancho = []
     for i in range(len(cuadrat)):
-        ancho.append(len(cuadrat[i][2]))
+        ancho.append(int(cuadrat[i][2]))
     return ancho
 #endregion
 #region imprimir forma
 def imprimir_forma(color, largaria, ancho):
     for i in range(len(color)):
-        print(color[i] + 'X'*(largaria[i]*ancho[i]))
+        for _ in range(ancho[i]):
+            print(color[i] + 'X'*largaria[i])
+        print()
 #endregion
